@@ -1,0 +1,49 @@
+package day017_WhileDoWhile;
+
+public class FrequencyOfWord_WhileLoop {
+
+    public static void main(String[] args) {
+
+        String str = "Java Java Python Python";
+
+        int frequency = 0;
+
+        while(str.contains("Java")){
+            str = str.replaceFirst("Java","");
+            frequency++;
+
+        }
+        System.out.println(frequency);
+
+        System.out.println("--------------------------------------------");
+
+        String sentence = "cat cat cat cat dog dog dog cat cat";
+        sentence = sentence.toLowerCase();
+
+        int countCat = 0;
+
+        while(sentence.contains("cat") ){
+            sentence = sentence.replaceFirst("cat", "");
+            countCat++;
+        }
+        System.out.println(countCat);
+
+        System.out.println("--------------------------------------------");
+
+        String s = "java java java python python python";
+
+        int countJava = 0;
+        int countPython = 0;
+
+        while (s.contains("java") || s.contains("python")){
+            s = s.replaceFirst("java", "");
+            countPython++;
+        }
+
+        System.out.println("countJava = "+ countJava);
+        System.out.println("countPython = "+ countPython);
+
+
+
+    }
+}
